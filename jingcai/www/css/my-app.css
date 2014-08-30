@@ -2,6 +2,12 @@
     height: 100%;
     width: 100%;
 }
+.col-100 img {
+    height: 100%;
+    width: 100%;    
+}
+
+
 .gaga {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

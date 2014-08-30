@@ -40,7 +40,7 @@ body {
 .page[data-page="index"],
 .page[data-page="detail"] {
   background: none;
-  background: #000000 url(../img/ios_7_galaxy-wide.jpg) no-repeat center;
+  background: #000000 url(../img/bg.jpg) no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -55,10 +55,9 @@ html.ios .page-content {
 /*==============================
     Navbar
 ==============================*/
-
 .navbar {
   border-bottom: none;
-  background: #191e3d;
+  background: #2b1127;
   color: #fff;
 }
 span.navbar-logo {
