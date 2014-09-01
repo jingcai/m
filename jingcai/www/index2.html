@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  >
 
 <head>
     <meta charset="utf-8">
@@ -17,6 +17,7 @@
     <!-- Phonegap build - cordova support -->
     <script type="text/javascript" src="cordova.js"></script>
     <!-- Phonegap build - cordova support -->
+    <script type="text/javascript" src="music/jquery.js"></script>
 </head>
 
 <body>
@@ -27,9 +28,9 @@
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
         <div class="content-block">
-            <p><i class="iconfont">&#xf01c7;</i> 加入QQ群</p>
-            <p><i class="iconfont">&#xf0026;</i> 访问网站</p>
-            <p><i class="iconfont">&#xf01b1;</i> 禹晖说说</p>
+            <p><i class="iconfont">&#xf01c7;</i>  <a href="web1.html"  >QQ群:364334120</a></p>
+            <p><i class="iconfont">&#xf0026;</i> <a href="web3.html" >晶彩家园</a></p>
+            <p><i class="iconfont">&#xf01b1;</i> <a href="web2.html">禹晖说说</a></p>
         </div>
     </div>
     <!-- Views-->
@@ -59,19 +60,20 @@
                         <!-- Page, data-page contains page name-->
                         <div data-page="index" class="page">
                             <!-- Scrollable page content-->
-                            <div class="page-content">
+                            <div class="page-content">                                
                                 <div class="content-block-title gaga">动态五图</div>
                                 <div class="content-block">
                                     <div class="row ">
                                         <div class="col-50">
-                                            <img src="pic/wudong.png">
+                                            
+                                            <a href="web.html"><img src="pic/dong2.png" ></a>
                                         </div>
                                         <div class="col-50">
-                                            <img src="pic/111.png">
+                                            <a href="web5.html"><img src="pic/wudong.png" ></a>
+                                            
                                         </div>
                                     </div>
                                 </div>
-
 
                                 <div class="content-block-title">五方如来</div>
                                 <div class="list-block">
@@ -90,6 +92,22 @@
                                     </div>
                                 </div>
 
+                                <div class="content-block-title">双灵</div>
+                                <div class="list-block">
+                                    <div class="row no-gutter">
+                                        <div class="col-50">
+                                            <img src="pic/c0.png">
+                                            <img src="pic/c1.png">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/c2.png">
+                                            <img src="pic/c3.png">
+                                        </div>
+                                        <div class="col-100">
+                                            <img src="pic/c4.png">
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="content-block-title">天音</div>
                                 <div class="list-block">
@@ -115,15 +133,10 @@
                                 <div class="content-block-title">888晶彩网格</div>
                                 <div class="list-block">
                                     <div class="row no-gutter">
-                                        <div class="col-50">
+                                        <div class="col-100">
                                             <img src="pic/tu1.jpeg">
                                         </div>
-                                        <div class="col-50">
-                                            <img src="pic/tu2.jpeg">
-                                        </div>
-                                        <div class="col-50">
-                                            <img src="pic/tu3.jpeg">
-                                        </div>
+                                         
                                     </div>
                                 </div>
                                 <div class="content-block-title">双光生命</div>
@@ -176,21 +189,46 @@
                 <div class="pages navbar-fixed">
                     <div data-page="home-2" class="page">
                         <div class="page-content">
-                            <div class="list-block forecast-list">
-                                <ul>
-                                    <li>rrr</li>
-                                    <li>sdfsd</li>
-                                </ul>
+                            <div class="content-block">
+                                <iframe src="http://y.baidu.com/jingcai" name="iframe1" width="100%" height="100%" onload="this.height=966" frameborder="0" style="margin-top: -32px"></iframe>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Tab 2 - View 3 -->
 
-
             <div id="tab3" class="view tab">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">记忆晶人</div>
+                    </div>
+                </div>
+
+                <div class="pages navbar-fixed">
+                    <div data-page="home-2" class="page">
+                        <div class="page-content">
+                            <div class="content-block">
+                                <p>晶彩图腾是来自宇宙深处的数据形态</p>
+                                <p>我们一直在探索其深刻含义</p>
+                                <p>这款游戏可以强化图腾在大脑中的印记</p>
+                                <p>连接来自大中央太阳中心的宇宙射线13-00-88通道</p>
+                                <p>&nbsp;</p>
+                                <div class="row">
+                                    <div class="col-100">
+                                        <a href="#" onclick="window.location.href='game.html'" class="button active ">开始</a>
+                                        <!-- <a href="game.html" class="item-link" class="button active ">开始</a> -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab4" class="view tab">
                 <div class="navbar">
                     <div class="navbar-inner">
                         <div class="center">晶人奕恕</div>
@@ -214,7 +252,8 @@
                 <div class="toolbar-inner">
                     <a href="#tab1" class="tab-link active"><i class="iconfont">&#xf017a;</i></a>
                     <a href="#tab2" class="tab-link"><i class="iconfont">&#xf0036;</i></a>
-                    <a href="#tab3" class="tab-link"><i class="iconfont">&#xf01f5;</i></a>
+                    <a href="#tab3" class="tab-link"><i class="iconfont">&#xf00e8;</i></a> 
+                    <a href="#tab4" class="tab-link"><i class="iconfont">&#xf01f5;</i></a>
                 </div>
             </div>
         </div>

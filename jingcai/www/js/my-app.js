@@ -11,6 +11,10 @@ var mainView = myApp.addView('.view-main', {
 });
 
  $$('.col-50 img').on('click', function (e) {
+    if (this.src.split('wudong').length==2||this.src.split('dong2').length==2) {
+        
+        return;
+    };
  var j=0;    
     for (var i = photoBrowserPhotos.length - 1; i >= 0; i--) {
         if(this.src.split(photoBrowserPhotos[i]).length==2){j=i;}
@@ -59,7 +63,7 @@ function createContentPage() {
 
 // Demo Photo Browsers
 var photoBrowserPhotos = [
-    'pic/wudong.png',
+    
     'pic/tu1.jpeg',
     'pic/tu2.jpeg',
     'pic/tu3.jpeg',
@@ -68,6 +72,11 @@ var photoBrowserPhotos = [
     'pic/wu3.png',
     'pic/wu4.png',
     'pic/wu5.png',
+    'pic/c0.png',
+    'pic/c1.png',
+    'pic/c2.png',
+    'pic/c3.png',
+    'pic/c4.png',    
     'pic/sheng.jpeg',
     'pic/shuang.jpeg',
     'pic/shuang1.jpeg',

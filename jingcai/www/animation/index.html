@@ -1,0 +1,158 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Poster Circle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=0.60, minimum-scale=0.60, maximum-scale=0.60">
+    <style type="text/css">
+
+      
+      #stage {
+        margin: 30% auto;
+        width: 50%;
+        height: 50%;
+        
+        
+      }
+
+      #rotate {
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+        /* Ensure that we're in 3D space */
+        -webkit-transform-style: preserve-3d;
+        /*
+        Make the whole set of rows use the x-axis spin animation
+        for a duration of 7 seconds, running infinitely and linearly
+        */
+        -webkit-animation-name: x-spin;
+        -webkit-animation-duration: 7s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+      }
+
+      .ring {
+        margin: 0 auto;
+        height: 9%;
+        width: 50%;
+        -webkit-transform-style: preserve-3d;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+      }
+      
+      .ring > :nth-child(odd) {
+        background-color: #995C7F;
+      }
+
+      .ring > :nth-child(even) {
+        background-color: #835A99;
+      }
+
+      .poster {
+        position: absolute;
+        left: 21%;
+        width: 8%;
+        height: 9%;
+        
+        color: rgba(0,0,0,0.9);
+        -webkit-border-radius: 10px;
+      }
+      
+     
+
+     
+      #ring-1 {
+        -webkit-animation-name: y-spin;
+        -webkit-animation-duration: 15s;
+      }
+
+      #ring-2 {
+        -webkit-animation-name: back-y-spin;
+        -webkit-animation-duration: 13s;
+      }
+
+      #ring-3 {
+        -webkit-animation-name: y-spin;
+        -webkit-animation-duration: 10s;
+      }
+
+     
+      @-webkit-keyframes x-spin {
+        0%    { -webkit-transform: rotateX(0deg); }
+        50%   { -webkit-transform: rotateX(180deg); }
+        100%  { -webkit-transform: rotateX(360deg); }
+      }
+
+      @-webkit-keyframes y-spin {
+        0%    { -webkit-transform: rotateY(0deg); }
+        50%   { -webkit-transform: rotateY(180deg); }
+        100%  { -webkit-transform: rotateY(360deg); }
+      }
+
+      @-webkit-keyframes back-y-spin {
+        0%    { -webkit-transform: rotateY(360deg); }
+        50%   { -webkit-transform: rotateY(180deg); }
+        100%  { -webkit-transform: rotateY(0deg); }
+      }
+      img{
+width:100px;
+height:200px;
+      }
+    </style>
+
+    <script type="text/javascript">
+
+      const POSTERS_PER_ROW = 5;
+      const RING_RADIUS = 200;
+
+      function setup_posters (row)
+      {
+        var posterAngle = 360 / POSTERS_PER_ROW;
+        for (var i = 0; i < POSTERS_PER_ROW; i ++) {
+          var poster = document.createElement('div');
+          poster.className = 'poster';
+          // compute and assign the transform for this poster
+          var transform = 'rotateY(' + (posterAngle * i) + 'deg) translateZ(' + RING_RADIUS + 'px)';
+          poster.style.webkitTransform = transform;
+          // setup the number to show inside the poster
+          var content = poster.appendChild(document.createElement('img'));
+          if (i==0) {content.src="fu.png";};
+          if (i==1) {content.src="lu.png";};
+          if (i==2) {content.src="qi.png";};
+          if (i==3) {content.src="shou.png";};
+          if (i==4) {content.src="tong.png";};
+          // add the poster to the row
+          row.appendChild(poster);
+        }
+
+      }
+
+      function init ()
+      {
+        setup_posters(document.getElementById('ring-1'));
+        setup_posters(document.getElementById('ring-2'));
+        setup_posters(document.getElementById('ring-3'));
+      }
+
+      // call init once the document is fully loaded
+      window.addEventListener('load', init, false);
+
+    </script>
+  </head>
+  
+  <body>
+
+   
+    <div id="stage">
+      <div id="rotate">
+        <div id="ring-1" class="ring"></div>
+        <div id="ring-2" class="ring"></div>
+        <div id="ring-3" class="ring"></div>
+      </div>
+    </div>
+
+  </body>
+  
+</html>
