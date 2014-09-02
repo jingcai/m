@@ -1,0 +1,660 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=0.60, minimum-scale=0.60, maximum-scale=0.60">
+    <style type="text/css">
+           .wrapper {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.wrapper {
+  width: 490px;
+  height: 450px;
+}
+
+.container {
+  width: 600px;
+  font-size: 0px;
+}
+
+.cube {
+  width: 50px;
+  height: 50px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 9000px;
+  perspective: 9000px;
+  display: inline-block;
+  /* 
+    // In case need to add txt inside cube faces
+    text-align: center;
+    line-height: $side;
+    font-weight: 300;
+    color:rgba(255,255,255,0.5);
+    font-size: $side/1.2;
+    padding: 0;
+  */
+  margin-left: 20px;
+  margin-top: 10px;
+  -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(0deg);
+  transform: rotateX(-25deg) rotateY(45deg) rotateZ(0deg);
+  -webkit-animation: rot 70s infinite ease-in-out;
+  animation: rot 70s infinite ease-in-out;
+}
+.container:nth-child(even) .cube:first-child {
+  margin-left: -15px;
+}
+.container:nth-child(even) .cube:nth-of-type(4), .container:nth-child(even) .cube:nth-of-type(5) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  opacity: .2;
+}
+.container:nth-child(even) .cube:nth-of-type(3), .container:nth-child(even) .cube:nth-of-type(6) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  opacity: .4;
+}
+.container:nth-child(even) .cube:nth-of-type(2), .container:nth-child(even) .cube:nth-of-type(7) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  opacity: .6;
+}
+.container:nth-child(even) .cube:nth-of-type(1), .container:nth-child(even) .cube:nth-of-type(8) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  opacity: .8;
+}
+.container:nth-child(odd) .cube:nth-of-type(4) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  opacity: .2;
+}
+.container:nth-child(odd) .cube:nth-of-type(3), .container:nth-child(odd) .cube:nth-of-type(5) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  opacity: .4;
+}
+.container:nth-child(odd) .cube:nth-of-type(2), .container:nth-child(odd) .cube:nth-of-type(6) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  opacity: .6;
+}
+.container:nth-child(odd) .cube:nth-of-type(1), .container:nth-child(odd) .cube:nth-of-type(7) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  opacity: .8;
+}
+
+.side {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.side:nth-child(1) {
+  background-color: #6c5c68;
+}
+.side:nth-child(2) {
+  background-color: #665763;
+}
+.side:nth-child(3) {
+  background-color: #60525d;
+}
+.side:nth-child(4) {
+  background-color: #5b4d58;
+}
+.side:nth-child(5) {
+  background-color: #554852;
+}
+.side:nth-child(6) {
+  background-color: #4f434d;
+}
+
+.front {
+  -webkit-transform: translate3d(0, 0, 25px);
+  transform: translate3d(0, 0, 25px);
+}
+
+.back {
+  -webkit-transform: rotateY(180deg) translate3d(0, 0, 25px);
+  transform: rotateY(180deg) translate3d(0, 0, 25px);
+}
+
+.left {
+  -webkit-transform: rotateY(-90deg) translate3d(0, 0, 25px);
+  transform: rotateY(-90deg) translate3d(0, 0, 25px);
+}
+
+.right {
+  -webkit-transform: rotateY(90deg) translate3d(0, 0, 25px);
+  transform: rotateY(90deg) translate3d(0, 0, 25px);
+}
+
+.top {
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 25px);
+  transform: rotateX(90deg) translate3d(0, 0, 25px);
+}
+
+.bottom {
+  -webkit-transform: rotateX(-90deg) translate3d(0, 0, 25px);
+  transform: rotateX(-90deg) translate3d(0, 0, 25px);
+}
+
+@-webkit-keyframes rot {
+  10%, 15% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg);
+  }
+  25%,30% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg);
+  }
+  40%,45% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg);
+  }
+  55%, 60% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg);
+  }
+  70%, 75% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg) rotateX(-90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg) rotateX(-90deg);
+  }
+  85% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(0deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(0deg);
+  }
+}
+
+@keyframes rot {
+  10%, 15% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg);
+  }
+  25%,30% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg);
+  }
+  40%,45% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg);
+  }
+  55%, 60% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg);
+  }
+  70%, 75% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg) rotateX(-90deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(90deg) rotateY(90deg) rotateX(-90deg) rotateY(90deg) rotateX(-90deg);
+  }
+  85% {
+    -webkit-transform: rotateX(-25deg) rotateY(45deg) rotateZ(0deg);
+    transform: rotateX(-25deg) rotateY(45deg) rotateZ(0deg);
+  }
+}
+
+    </style>
+
+
+      
+  </head>
+  
+  <body>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+    <div class="cube">
+      <div class="side front"></div>
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side right"></div>
+      <div class="side bottom"></div>
+      <div class="side top"></div>
+    </div>
+  </div>
+</div>
+  </body>
+  
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=0.60, minimum-scale=0.60, maximum-scale=0.60">
+    <style type="text/css">
+html, body {
+  height: 100%;
+  /*background: #000;*/
+  overflow: hidden;
+  perspective: 800px;
+  -webkit-transform:scale(0.9);
+}
+
+.rap {
+  -webkit-animation-iteration-count: "infinite";
+  -webkit-animation-timing-function: "linear";
+  -webkit-animation-name: "spin";
+  -webkit-animation-duration:  10s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: calc(30% );
+  left: calc(32% );
+}
+
+.gon {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 100px);
+}
+
+.gon:nth-child(1) {
+  background-color: rgba(64, 0, 255, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(36deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+    -webkit-animation-delay: 0.1s;
+}
+.gon:nth-child(1):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(36deg) translateZ(-32px);
+    -webkit-animation: none;
+}
+.gon:nth-child(2) {
+  background-color: rgba(127, 0, 255, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(72deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+    -webkit-animation-delay: 0.2s;
+}
+.gon:nth-child(2):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(72deg) translateZ(-32px);
+  animation: none;
+}
+.gon:nth-child(3) {
+  background-color: rgba(191, 0, 255, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(108deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+  animation-delay: 0.3s;
+}
+.gon:nth-child(3):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(108deg) translateZ(-32px);
+  animation: none;
+}
+.gon:nth-child(4) {
+  background-color: rgba(255, 0, 255, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(144deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+    -webkit-animation-delay: 0.4s;
+}
+.gon:nth-child(4):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(144deg) translateZ(-32px);
+  animation: none;
+}
+.gon:nth-child(5) {
+  background-color: rgba(255, 0, 191, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(180deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+    -webkit-animation-delay: 0.5s;
+}
+.gon:nth-child(5):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(180deg) translateZ(-32px);
+  animation: none;
+}
+.gon:nth-child(6) {
+  background-color: rgba(255, 0, 128, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(216deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+    -webkit-animation-delay: 0.6s;
+}
+.gon:nth-child(6):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(216deg) translateZ(-32px);
+  animation: none;
+}
+.gon:nth-child(7) {
+  background-color: rgba(255, 0, 64, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(252deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+  animation-delay: 0.7s;
+}
+.gon:nth-child(7):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(252deg) translateZ(-32px);
+  animation: none;
+}
+.gon:nth-child(8) {
+  background-color: rgba(255, 0, 0, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(288deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+    -webkit-animation-delay: 0.8s;
+}
+.gon:nth-child(8):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(288deg) translateZ(-32px);
+  animation: none;
+}
+.gon:nth-child(9) {
+  background-color: rgba(255, 64, 0, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(324deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+    -webkit-animation-delay: 0.9s;
+}
+.gon:nth-child(9):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(324deg) translateZ(-32px);
+  animation: none;
+}
+.gon:nth-child(10) {
+  background-color: rgba(255, 128, 0, 0.8);
+    -webkit-transform: rotateX(-50deg) rotateY(360deg) translateZ(149px);
+    -webkit-animation: bg 1s linear infinite;
+    -webkit-animation-delay: 1s;
+}
+.gon:nth-child(10):nth-child(even) {
+  background: rgba(255, 255, 0, 0.4);
+    -webkit-transform: rotateX(-50deg) rotateY(360deg) translateZ(-32px);
+  animation: none;
+}
+
+@-webkit-keyframes spin {
+  0% {
+      -webkit-transform: rotateX(1turn) rotateY(1turn);
+  }
+}
+@-webkit-keyframes bg {
+  50% {
+    background: transparent;
+  }
+}
+
+    </style>
+
+  
+    
+  </head>
+  
+  <body>
+
+<div class='rap'>
+  <img class='gon' src="fu.png">
+  <img class='gon' src="lu.png">
+  <img class='gon' src="qi.png">
+  <img class='gon' src="shou.png">
+  <img class='gon' src="tong.png">
+  <img class='gon' src="fu.png">
+  <img class='gon' src="lu.png">
+  <img class='gon' src="qi.png">
+  <img class='gon' src="shou.png">
+  <img  class='gon' src="tong.png">
+</div>
+
+
+  </body>
+  
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=0.60, minimum-scale=0.60, maximum-scale=0.60">
+    <style type="text/css">
+.container .origin, .container .origin .cube, .cube .surface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  -webkit-transform:scale(0.6);
+}
+
+.container {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  margin-top: 70%;  
+  -moz-perspective: 600px;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+}
+.container .origin {
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-animation: rotate-central 10s linear infinite forwards;
+  -moz-animation: rotate-central 10s linear infinite forwards;
+  -ms-animation: rotate-central 10s linear infinite forwards;
+  -o-animation: rotate-central 10s linear infinite forwards;
+  animation: rotate-central 10s linear infinite forwards;
+}
+.container .origin .cube {
+  width: 100px;
+  height: 100px;
+}
+
+.cube {
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.cube .surface {
+  width: 100px;
+  height: 100px;
+  outline: solid 1px transparent;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.cube .surface.front {
+  background: rgba(255, 0, 0, 0.3);
+  -moz-transform: rotateY(0deg) translateZ(50px);
+  -ms-transform: rotateY(0deg) translateZ(50px);
+  -webkit-transform: rotateY(0deg) translateZ(50px);
+  transform: rotateY(0deg) translateZ(50px);
+}
+.cube .surface.left {
+  background: rgba(0, 255, 0, 0.3);
+  -moz-transform: rotateY(-90deg) translateZ(50px);
+  -ms-transform: rotateY(-90deg) translateZ(50px);
+  -webkit-transform: rotateY(-90deg) translateZ(50px);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.cube .surface.back {
+  background: rgba(0, 0, 255, 0.3);
+  -moz-transform: rotateY(180deg) translateZ(50px);
+  -ms-transform: rotateY(180deg) translateZ(50px);
+  -webkit-transform: rotateY(180deg) translateZ(50px);
+  transform: rotateY(180deg) translateZ(50px);
+}
+.cube .surface.right {
+  background: rgba(255, 0, 255, 0.3);
+  -moz-transform: rotateY(90deg) translateZ(50px);
+  -ms-transform: rotateY(90deg) translateZ(50px);
+  -webkit-transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) translateZ(50px);
+}
+.cube .surface.top {
+  background: rgba(255, 255, 0, 0.3);
+  -moz-transform: rotateX(90deg) translateZ(50px);
+  -ms-transform: rotateX(90deg) translateZ(50px);
+  -webkit-transform: rotateX(90deg) translateZ(50px);
+  transform: rotateX(90deg) translateZ(50px);
+}
+.cube .surface.bottom {
+  background: rgba(0, 255, 255, 0.3);
+  -moz-transform: rotateX(-90deg) translateZ(50px);
+  -ms-transform: rotateX(-90deg) translateZ(50px);
+  -webkit-transform: rotateX(-90deg) translateZ(50px);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+.cube.layer1.r1.c1 {
+  -moz-transform: translateX(-125px) translateY(-125px) translateZ(-125px);
+  -ms-transform: translateX(-125px) translateY(-125px) translateZ(-125px);
+  -webkit-transform: translateX(-125px) translateY(-125px) translateZ(-125px);
+  transform: translateX(-125px) translateY(-125px) translateZ(-125px);
+}
+.cube.layer1.r1.c2 {
+  -moz-transform: translateX(0px) translateY(-125px) translateZ(-125px);
+  -ms-transform: translateX(0px) translateY(-125px) translateZ(-125px);
+  -webkit-transform: translateX(0px) translateY(-125px) translateZ(-125px);
+  transform: translateX(0px) translateY(-125px) translateZ(-125px);
+}
+.cube.layer1.r1.c3 {
+  -moz-transform: translateX(125px) translateY(-125px) translateZ(-125px);
+  -ms-transform: translateX(125px) translateY(-125px) translateZ(-125px);
+  -webkit-transform: translateX(125px) translateY(-125px) translateZ(-125px);
+  transform: translateX(125px) translateY(-125px) translateZ(-125px);
+}
+.cube.layer1.r2.c1 {
+  -moz-transform: translateX(-125px) translateY(0px) translateZ(-125px);
+  -ms-transform: translateX(-125px) translateY(0px) translateZ(-125px);
+  -webkit-transform: translateX(-125px) translateY(0px) translateZ(-125px);
+  transform: translateX(-125px) translateY(0px) translateZ(-125px);
+}
+.cube.layer1.r2.c2 {
+  -moz-transform: translateX(0px) translateY(0px) translateZ(-125px);
+  -ms-transform: translateX(0px) translateY(0px) translateZ(-125px);
+  -webkit-transform: translateX(0px) translateY(0px) translateZ(-125px);
+  transform: translateX(0px) translateY(0px) translateZ(-125px);
+}
+.cube.layer1.r2.c3 {
+  -moz-transform: translateX(125px) translateY(0px) translateZ(-125px);
+  -ms-transform: translateX(125px) translateY(0px) translateZ(-125px);
+  -webkit-transform: translateX(125px) translateY(0px) translateZ(-125px);
+  transform: translateX(125px) translateY(0px) translateZ(-125px);
+}
+.cube.layer1.r3.c1 {
+  -moz-transform: translateX(-125px) translateY(125px) translateZ(-125px);
+  -ms-transform: translateX(-125px) translateY(125px) translateZ(-125px);
+  -webkit-transform: translateX(-125px) translateY(125px) translateZ(-125px);
+  transform: translateX(-125px) translateY(125px) translateZ(-125px);
+}
+.cube.layer1.r3.c2 {
+  -moz-transform: translateX(0px) translateY(125px) translateZ(-125px);
+  -ms-transform: translateX(0px) translateY(125px) translateZ(-125px);
+  -webkit-transform: translateX(0px) translateY(125px) translateZ(-125px);
+  transform: translateX(0px) translateY(125px) translateZ(-125px);
+}
+.cube.layer1.r3.c3 {
+  -moz-transform: translateX(125px) translateY(125px) translateZ(-125px);
+  -ms-transform: translateX(125px) translateY(125px) translateZ(-125px);
+  -webkit-transform: translateX(125px) translateY(125px) translateZ(-125px);
+  transform: translateX(125px) translateY(125px) translateZ(-125px);
+}
+.cube.layer2.r1.c1 {
+  -moz-transform: translateX(-125px) translateY(-125px) translateZ(0px);
+  -ms-transform: translateX(-125px) translateY(-125px) translateZ(0px);
+  -webkit-transform: translateX(-125px) translateY(-125px) translateZ(0px);
+  transform: translateX(-125px) translateY(-125px) translateZ(0px);
+}
+.cube.layer2.r1.c2 {
+  -moz-transform: translateX(0px) translateY(-125px) translateZ(0px);
+  -ms-transform: translateX(0px) translateY(-125px) translateZ(0px);
+  -webkit-transform: translateX(0px) translateY(-125px) translateZ(0px);
+  transform: translateX(0px) translateY(-125px) translateZ(0px);
+}
+.cube.layer2.r1.c3 {
+  -moz-transform: translateX(125px) translateY(-125px) translateZ(0px);
+  -ms-transform: translateX(125px) translateY(-125px) translateZ(0px);
+  -webkit-transform: translateX(125px) translateY(-125px) translateZ(0px);
+  transform: translateX(125px) translateY(-125px) translateZ(0px);
+}
+.cube.layer2.r2.c1 {
+  -moz-transform: translateX(-125px) translateY(0px) translateZ(0px);
+  -ms-transform: translateX(-125px) translateY(0px) translateZ(0px);
+  -webkit-transform: translateX(-125px) translateY(0px) translateZ(0px);
+  transform: translateX(-125px) translateY(0px) translateZ(0px);
+}
+.cube.layer2.r2.c2 {
+  -moz-transform: translateX(0px) translateY(0px) translateZ(0px);
+  -ms-transform: translateX(0px) translateY(0px) translateZ(0px);
+  -webkit-transform: translateX(0px) translateY(0px) translateZ(0px);
+  transform: translateX(0px) translateY(0px) translateZ(0px);
+}
+.cube.layer2.r2.c3 {
+  -moz-transform: translateX(125px) translateY(0px) translateZ(0px);
+  -ms-transform: translateX(125px) translateY(0px) translateZ(0px);
+  -webkit-transform: translateX(125px) translateY(0px) translateZ(0px);
+  transform: translateX(125px) translateY(0px) translateZ(0px);
+}
+.cube.layer2.r3.c1 {
+  -moz-transform: translateX(-125px) translateY(125px) translateZ(0px);
+  -ms-transform: translateX(-125px) translateY(125px) translateZ(0px);
+  -webkit-transform: translateX(-125px) translateY(125px) translateZ(0px);
+  transform: translateX(-125px) translateY(125px) translateZ(0px);
+}
+.cube.layer2.r3.c2 {
+  -moz-transform: translateX(0px) translateY(125px) translateZ(0px);
+  -ms-transform: translateX(0px) translateY(125px) translateZ(0px);
+  -webkit-transform: translateX(0px) translateY(125px) translateZ(0px);
+  transform: translateX(0px) translateY(125px) translateZ(0px);
+}
+.cube.layer2.r3.c3 {
+  -moz-transform: translateX(125px) translateY(125px) translateZ(0px);
+  -ms-transform: translateX(125px) translateY(125px) translateZ(0px);
+  -webkit-transform: translateX(125px) translateY(125px) translateZ(0px);
+  transform: translateX(125px) translateY(125px) translateZ(0px);
+}
+.cube.layer3.r1.c1 {
+  -moz-transform: translateX(-125px) translateY(-125px) translateZ(125px);
+  -ms-transform: translateX(-125px) translateY(-125px) translateZ(125px);
+  -webkit-transform: translateX(-125px) translateY(-125px) translateZ(125px);
+  transform: translateX(-125px) translateY(-125px) translateZ(125px);
+}
+.cube.layer3.r1.c2 {
+  -moz-transform: translateX(0px) translateY(-125px) translateZ(125px);
+  -ms-transform: translateX(0px) translateY(-125px) translateZ(125px);
+  -webkit-transform: translateX(0px) translateY(-125px) translateZ(125px);
+  transform: translateX(0px) translateY(-125px) translateZ(125px);
+}
+.cube.layer3.r1.c3 {
+  -moz-transform: translateX(125px) translateY(-125px) translateZ(125px);
+  -ms-transform: translateX(125px) translateY(-125px) translateZ(125px);
+  -webkit-transform: translateX(125px) translateY(-125px) translateZ(125px);
+  transform: translateX(125px) translateY(-125px) translateZ(125px);
+}
+.cube.layer3.r2.c1 {
+  -moz-transform: translateX(-125px) translateY(0px) translateZ(125px);
+  -ms-transform: translateX(-125px) translateY(0px) translateZ(125px);
+  -webkit-transform: translateX(-125px) translateY(0px) translateZ(125px);
+  transform: translateX(-125px) translateY(0px) translateZ(125px);
+}
+.cube.layer3.r2.c2 {
+  -moz-transform: translateX(0px) translateY(0px) translateZ(125px);
+  -ms-transform: translateX(0px) translateY(0px) translateZ(125px);
+  -webkit-transform: translateX(0px) translateY(0px) translateZ(125px);
+  transform: translateX(0px) translateY(0px) translateZ(125px);
+}
+.cube.layer3.r2.c3 {
+  -moz-transform: translateX(125px) translateY(0px) translateZ(125px);
+  -ms-transform: translateX(125px) translateY(0px) translateZ(125px);
+  -webkit-transform: translateX(125px) translateY(0px) translateZ(125px);
+  transform: translateX(125px) translateY(0px) translateZ(125px);
+}
+.cube.layer3.r3.c1 {
+  -moz-transform: translateX(-125px) translateY(125px) translateZ(125px);
+  -ms-transform: translateX(-125px) translateY(125px) translateZ(125px);
+  -webkit-transform: translateX(-125px) translateY(125px) translateZ(125px);
+  transform: translateX(-125px) translateY(125px) translateZ(125px);
+}
+.cube.layer3.r3.c2 {
+  -moz-transform: translateX(0px) translateY(125px) translateZ(125px);
+  -ms-transform: translateX(0px) translateY(125px) translateZ(125px);
+  -webkit-transform: translateX(0px) translateY(125px) translateZ(125px);
+  transform: translateX(0px) translateY(125px) translateZ(125px);
+}
+.cube.layer3.r3.c3 {
+  -moz-transform: translateX(125px) translateY(125px) translateZ(125px);
+  -ms-transform: translateX(125px) translateY(125px) translateZ(125px);
+  -webkit-transform: translateX(125px) translateY(125px) translateZ(125px);
+  transform: translateX(125px) translateY(125px) translateZ(125px);
+}
+
+@-webkit-keyframes rotate-central {
+  0% {
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-moz-keyframes rotate-central {
+  0% {
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-ms-keyframes rotate-central {
+  0% {
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-o-keyframes rotate-central {
+  0% {
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@keyframes rotate-central {
+  0% {
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+    </style>
+
+
+      
+  </head>
+  
+  <body>
+
+<div class="container">
+  <div class="origin">
+    <div class="cube layer1 r1 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer1 r1 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer1 r1 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer1 r2 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer1 r2 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer1 r2 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer1 r3 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer1 r3 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer1 r3 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r1 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r1 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r1 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r2 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r2 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r2 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r3 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r3 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer2 r3 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r1 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r1 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r1 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r2 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r2 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r2 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r3 c1">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r3 c2">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+    <div class="cube layer3 r3 c3">
+      <div class="surface front"></div>
+      <div class="surface back"></div>
+      <div class="surface left"></div>
+      <div class="surface right"></div>
+      <div class="surface top"></div>
+      <div class="surface bottom"></div>
+    </div>
+  </div>
+</div>
+
+  </body>
+  
+</html>

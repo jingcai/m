@@ -10,16 +10,23 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-// Event listener to run specific code for specific pages
-$$(document).on('pageInit', function (e) {
-    var page = e.detail.page;
-    // If it is About page
-    if (page.name === 'about') {
-        // run createContentPage func after link was clicked
-        $$('.create-page').on('click', function () {
-            createContentPage();
-        });
-    }
+ $$('.col-50 img').on('click', function (e) {
+    if (this.src.split('wudong').length==2||this.src.split('dong2').length==2) {
+        
+        return;
+    };
+ var j=0;    
+    for (var i = photoBrowserPhotos.length - 1; i >= 0; i--) {
+        if(this.src.split(photoBrowserPhotos[i]).length==2){j=i;}
+    };
+    photoBrowserDark.open(j);
+});
+$$('.col-100 img').on('click', function (e) {
+ var j=0;    
+    for (var i = photoBrowserPhotos.length - 1; i >= 0; i--) {
+        if(this.src.split(photoBrowserPhotos[i]).length==2){j=i;}
+    };
+    photoBrowserDark.open(j);
 });
 
 // Generate dynamic page
@@ -50,3 +57,38 @@ function createContentPage() {
     );
 	return;
 }
+
+
+
+
+// Demo Photo Browsers
+var photoBrowserPhotos = [
+    
+    'pic/tu1.jpeg',
+    'pic/tu2.jpeg',
+    'pic/tu3.jpeg',
+    'pic/wu1.png',
+    'pic/wu2.png',
+    'pic/wu3.png',
+    'pic/wu4.png',
+    'pic/wu5.png',
+    'pic/c0.png',
+    'pic/c1.png',
+    'pic/c2.png',
+    'pic/c3.png',
+    'pic/c4.png',    
+    'pic/sheng.jpeg',
+    'pic/shuang.jpeg',
+    'pic/shuang1.jpeg',
+    'pic/shuang2.jpeg',
+    'pic/shuang3.jpeg',
+    'pic/xiang.gif',
+    'pic/yi.gif',
+    'pic/yun.gif',
+    'pic/wu.gif',
+    'pic/baozi.gif',
+];
+var photoBrowserDark = myApp.photoBrowser({
+    photos: photoBrowserPhotos,
+    theme: 'dark'
+});

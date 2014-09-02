@@ -1,2 +1,2 @@
-/Users/dong/Desktop/jingcai/platforms/android/ant-build/AndroidManifest.xml : \
-/Users/dong/Desktop/jingcai/platforms/android/AndroidManifest.xml \
+/Users/dong/m/jingcai/platforms/android/ant-build/AndroidManifest.xml : \
+/Users/dong/m/jingcai/platforms/android/AndroidManifest.xml \
