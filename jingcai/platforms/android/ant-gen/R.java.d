@@ -1,4 +1,4 @@
-/Users/dong/m/jingcai/platforms/android/ant-gen/com/phonegap/jingcai/R.java \
+/Users/dong/m/jingcai/platforms/android/ant-gen/org/888000/jingcai/R.java \
  : /Users/dong/m/jingcai/platforms/android/res/drawable/icon.png \
 /Users/dong/m/jingcai/platforms/android/res/drawable-hdpi/icon.png \
 /Users/dong/m/jingcai/platforms/android/res/drawable-land-hdpi/screen.png \
