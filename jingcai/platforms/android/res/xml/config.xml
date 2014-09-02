@@ -44,9 +44,5 @@
     <gap:splash gap:platform="ios" height="1136" src="res/screen/ios/screen-iphone-portrait-568h-2x" width="640" />
     <gap:splash gap:platform="ios" height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
-    <access origin="http://127.0.0.1*" />
-    <access origin="http://*taobao*" />
-    <access origin="http://*baidu*" />
-    <access origin="http://*888000*" />
-    <access origin="http://*qq*" />
+    <access origin="*" />
 </widget>
