@@ -1,4 +1,4 @@
-/Users/dong/m/jingcai/platforms/android/ant-gen/org/888000/jingcai/R.java \
+/Users/dong/m/jingcai/platforms/android/ant-gen/com/phonegap/jingcai/R.java \
  : /Users/dong/m/jingcai/platforms/android/res/drawable/icon.png \
 /Users/dong/m/jingcai/platforms/android/res/drawable-hdpi/icon.png \
 /Users/dong/m/jingcai/platforms/android/res/drawable-land-hdpi/screen.png \
@@ -14,7 +14,6 @@
 /Users/dong/m/jingcai/platforms/android/res/drawable-xhdpi/icon.png \
 /Users/dong/m/jingcai/platforms/android/res/values/strings.xml \
 /Users/dong/m/jingcai/platforms/android/res/xml/config.xml \
-/Users/dong/m/jingcai/platforms/android/ant-build/res/drawable/icon.png \
 /Users/dong/m/jingcai/platforms/android/ant-build/res/drawable-hdpi/icon.png \
 /Users/dong/m/jingcai/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
 /Users/dong/m/jingcai/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \

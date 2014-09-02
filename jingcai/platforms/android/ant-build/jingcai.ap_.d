@@ -14,7 +14,6 @@
 /Users/dong/m/jingcai/platforms/android/res/drawable-xhdpi/icon.png \
 /Users/dong/m/jingcai/platforms/android/res/values/strings.xml \
 /Users/dong/m/jingcai/platforms/android/res/xml/config.xml \
-/Users/dong/m/jingcai/platforms/android/ant-build/res/drawable/icon.png \
 /Users/dong/m/jingcai/platforms/android/ant-build/res/drawable-hdpi/icon.png \
 /Users/dong/m/jingcai/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
 /Users/dong/m/jingcai/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \
@@ -40,6 +39,7 @@
 /Users/dong/m/jingcai/platforms/android/assets/www/font \
 /Users/dong/m/jingcai/platforms/android/assets/www/form.html \
 /Users/dong/m/jingcai/platforms/android/assets/www/game.html \
+/Users/dong/m/jingcai/platforms/android/assets/www/icon.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/img \
 /Users/dong/m/jingcai/platforms/android/assets/www/index.html \
 /Users/dong/m/jingcai/platforms/android/assets/www/index1.html \
@@ -53,6 +53,7 @@
 /Users/dong/m/jingcai/platforms/android/assets/www/pic \
 /Users/dong/m/jingcai/platforms/android/assets/www/res \
 /Users/dong/m/jingcai/platforms/android/assets/www/services.html \
+/Users/dong/m/jingcai/platforms/android/assets/www/start.html \
 /Users/dong/m/jingcai/platforms/android/assets/www/web.html \
 /Users/dong/m/jingcai/platforms/android/assets/www/web1.html \
 /Users/dong/m/jingcai/platforms/android/assets/www/web2.html \
@@ -162,6 +163,7 @@
 /Users/dong/m/jingcai/platforms/android/assets/www/pic/xiang.gif \
 /Users/dong/m/jingcai/platforms/android/assets/www/pic/yi.gif \
 /Users/dong/m/jingcai/platforms/android/assets/www/pic/yun.gif \
+/Users/dong/m/jingcai/platforms/android/assets/www/pic/zhuan.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/icon \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/icon/android \
@@ -176,20 +178,11 @@
 /Users/dong/m/jingcai/platforms/android/assets/www/res/icon/ios/icon-72.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android/screen-hdpi-landscape.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android/screen-hdpi-portrait.png \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android/screen-ldpi-landscape.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android/screen-ldpi-portrait.png \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android/screen-mdpi-landscape.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android/screen-mdpi-portrait.png \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android/screen-xhdpi-landscape.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/android/screen-xhdpi-portrait.png \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-ipad-landscape-2x.png \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-ipad-landscape.png \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-ipad-portrait-2x.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-ipad-portrait.png \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-iphone-landscape-2x.png \
-/Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-iphone-landscape.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-iphone-portrait-2x.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-iphone-portrait-568h-2x.png \
 /Users/dong/m/jingcai/platforms/android/assets/www/res/screen/ios/screen-iphone-portrait.png \
