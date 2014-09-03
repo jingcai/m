@@ -7,37 +7,3 @@
     width: 100%;    
 }
 
-
-.gaga {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: #dac5a8;
-    background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, .6) 30%, #aff0ff 50%, rgba(0, 0, 0, .6) 70%);
-    background-blend-mode: hard-light;
-    background-size: 200%;
-    -webkit-animation: shine 4s infinite;
-}
-@-webkit-keyframes shine {
-    from {
-        background-position: 150%;
-    }
-    to {
-        background-position: -50%;
-    }
-}
-@-webkit-keyframes hover {
-    from {
-        transform: translateY(-50%);
-    }
-    to {
-        transform: translateY(-75%);
-    }
-}
-@-webkit-keyframes hoverSmall {
-    from {
-        transform: translateY(30%) rotate(45deg);
-    }
-    to {
-        transform: translateY(-10%) rotate(45deg);
-    }
-}

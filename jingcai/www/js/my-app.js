@@ -29,6 +29,15 @@ $$('.col-100 img').on('click', function (e) {
     photoBrowserDark.open(j);
 });
 
+$$('#tab4').on('show', function () {
+        if ($$('#tab4 iframe').attr('src')!='http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310') {$$('#tab4 iframe').attr('src','http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310')}
+});
+
+$$('#tab2').on('show', function () {
+    
+        if ($$('#tab2 iframe').attr('src')!='http://y.baidu.com/jingcai') {$$('#tab2 iframe').attr('src','http://y.baidu.com/jingcai')}
+                
+});
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {
