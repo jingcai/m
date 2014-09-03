@@ -195,7 +195,7 @@ var root=__dirname,
     port="8888";
     
     
-if(!path.existsSync(root)){
+if(!fs.existsSync(root)){
     util.error(root+"文件夹不存在，请重新制定根文件夹！");
     process.exit();
 }
@@ -243,7 +243,7 @@ function formatBody(parent,files){
     res.push("<ul>")
     files.forEach(function(val,index){
         var stat=fs.statSync(path.join(parent,val));
-        if(stat.isDirectory(val)){
+        if(stat&&stat.isDirectory(val)){
             val=path.basename(val)+"/";
         }else{
             val=path.basename(val);
@@ -289,16 +289,14 @@ http.createServer(function(req,res){
         listDirectory(root,req,res);
     }else{
         filename=path.join(root,pathname);
-        path.exists(filename,function(exists){
+        fs.exists(filename,function(exists){
             if(!exists){
                 util.error('找不到文件'+filename);
                 write404(req,res);
             }else{
                 fs.stat(filename,function(err,stat){
-                    if(stat.isFile()){
+                    if(stat&&stat.isFile()){
                         showFile(filename,req,res);
-                    }else if(stat.isDirectory()){
-                        listDirectory(filename,req,res);
                     }
                 });
             }
