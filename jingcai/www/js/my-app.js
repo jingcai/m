@@ -95,7 +95,7 @@ var photoBrowserPhotos = [
     'pic/yi.gif',
     'pic/yun.gif',
     'pic/wu.gif',
-    'pic/baozi.gif',
+    'pic/baozi.png',
 ];
 var photoBrowserDark = myApp.photoBrowser({
     photos: photoBrowserPhotos,
