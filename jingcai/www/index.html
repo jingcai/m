@@ -1,612 +1,317 @@
-<style type="text/css">
-body {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    background-color: #171d25;
-}
-.base div {
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-svg {
-    position: absolute;
-}
-#wrapper {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-}
-.centering {
-    left: 50%;
-    top: 33%;
-    margin-left: -96px;
-    margin-top: -96px;
-    width: 192px;
-    height: 192px;
-    position: absolute;
-}
-.base {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: translate3d(0.00px, 0.00px, 0.00px);
-    -moz-transform: translate3d(0.00px, 0.00px, 0.00px);
-    -o-transform: translate3d(0.00px, 0.00px, 0.00px);
-    -ms-transform: translate3d(0.00px, 0.00px, 0.00px);
-    transform: translate3d(0.00px, 0.00px, 0.00px);
-    background-image: -webkit-radial-gradient(rgba(240, 230, 140, 0.7), rgba(0, 1, 1, 0.02) 63%);
-}
-/*--Basic Setting--*/
+<!doctype html>
+<html>
 
-#top {
-    -webkit-transform: translate3d(0.00px, 0.00px, 141.00px);
-    -moz-transform: translate3d(0.00px, 0.00px, 141.00px);
-    -o-transform: translate3d(0.00px, 0.00px, 141.00px);
-    -ms-transform: translate3d(0.00px, 0.00px, 141.00px);
-    transform: translate3d(0.00px, 0.00px, 141.00px);
-}
-.m {
-    -webkit-transform: translate3d(0.00px, 0.00px, 85px) rotate(0.00deg) rotateY(-45.00deg);
-    -moz-transform: translate3d(0.00px, 0.00px, 85px) rotate(0.00deg) rotateY(-45.00deg);
-    -o-transform: translate3d(0.00px, 0.00px, 85px) rotate(0.00deg) rotateY(-45.00deg);
-    -ms-transform: translate3d(0.00px, 0.00px, 85px) rotate(0.00deg) rotateY(-45.00deg);
-    transform: translate3d(0.00px, 0.00px, 85px) rotate(0.00deg) rotateY(-45.00deg);
-}
-.b {
-    -webkit-transform: translate3d(-17px, 0px, 16px) rotate(0.00deg) rotateY(-132deg);
-    -moz-transform: translate3d(-17px, 0px, 16px) rotate(0.00deg) rotateY(-132deg);
-    -o-transform: translate3d(-17px, 0px, 16px) rotate(0.00deg) rotateY(-132deg);
-    -ms-transform: translate3d(-17px, 0px, 16px) rotate(0.00deg) rotateY(-132deg);
-    transform: translate3d(-17px, 0px, 16px) rotate(0.00deg) rotateY(-132deg);
-}
-.s {
-    -webkit-transform: translate3d(84.00px, 0.00px, -39.00px) rotate(0.00deg) rotateY(0.00deg) skew(90.00deg, 1.00deg);
-    -moz-transform: translate3d(84.00px, 0.00px, -39.00px) rotate(0.00deg) rotateY(0.00deg) skew(90.00deg, 1.00deg);
-    -o-transform: translate3d(84.00px, 0.00px, -39.00px) rotate(0.00deg) rotateY(0.00deg) skew(90.00deg, 1.00deg);
-    -ms-transform: translate3d(84.00px, 0.00px, -39.00px) rotate(0.00deg) rotateY(0.00deg) skew(90.00deg, 1.00deg);
-    transform: translate3d(84.00px, 0.00px, -39.00px) rotate(0.00deg) rotateY(0.00deg) skew(90.00deg, 1.00deg);
-    -webkit-animation-name: shine;
-    -moz-animation-name: shine;
-    -o-animation-name: shine;
-    -ms-animation-name: shine;
-    animation-name: shine;
-    -webkit-animation-duration: 14s;
-    -moz-animation-duration: 14s;
-    -o-animation-duration: 14s;
-    -ms-animation-duration: 14s;
-    animation-duration: 14s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-    -ms-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    opacity: 0.6;
-}
-.faces {
-    -webkit-transform: translate3d(-6.00px, 67.00px, 40.00px) rotate(0.00deg);
-    -moz-transform: translate3d(-6.00px, 67.00px, 40.00px) rotate(0.00deg);
-    -o-transform: translate3d(-6.00px, 67.00px, 40.00px) rotate(0.00deg);
-    -ms-transform: translate3d(-6.00px, 67.00px, 40.00px) rotate(0.00deg);
-    transform: translate3d(-6.00px, 67.00px, 40.00px) rotate(0.00deg);
-}
-.face2 {
-    -webkit-transform: translate3d(204px, 58px, 0px) rotate(180.00deg);
-    -moz-transform: translate3d(204px, 58px, 0px) rotate(180.00deg);
-    -o-transform: translate3d(204px, 58px, 0px) rotate(180.00deg);
-    -ms-transform: translate3d(204px, 58px, 0px) rotate(180.00deg);
-    transform: translate3d(204px, 58px, 0px) rotate(180.00deg);
-}
-#a1,
-#a2,
-#a3,
-#a4,
-#a5,
-#a6 {
-    width: 204px;
-    height: 58px;
-}
-#a2 {
-    -webkit-transform: translate3d(0px, 0px, 0.00px) rotate(30.00deg);
-    -moz-transform: translate3d(0px, 0px, 0.00px) rotate(30.00deg);
-    -o-transform: translate3d(0px, 0px, 0.00px) rotate(30.00deg);
-    -ms-transform: translate3d(0px, 0px, 0.00px) rotate(30.00deg);
-    transform: translate3d(0px, 0px, 0.00px) rotate(30.00deg);
-    -webkit-animation-delay: 0.5s;
-    -moz-animation-delay: 0.5s;
-    -o-animation-delay: 0.5s;
-    -ms-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-}
-#a3 {
-    -webkit-transform: translate3d(0px, 0px, 0px) rotate(60.00deg);
-    -moz-transform: translate3d(0px, 0px, 0px) rotate(60.00deg);
-    -o-transform: translate3d(0px, 0px, 0px) rotate(60.00deg);
-    -ms-transform: translate3d(0px, 0px, 0px) rotate(60.00deg);
-    transform: translate3d(0px, 0px, 0px) rotate(60.00deg);
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    -o-animation-delay: 1s;
-    -ms-animation-delay: 1s;
-    animation-delay: 1s;
-}
-#a4 {
-    -webkit-transform: rotate(90.00deg);
-    -moz-transform: rotate(90.00deg);
-    -o-transform: rotate(90.00deg);
-    -ms-transform: rotate(90.00deg);
-    transform: rotate(90.00deg);
-    -webkit-animation-delay: 1.5s;
-    -moz-animation-delay: 1.5s;
-    -o-animation-delay: 1.5s;
-    -ms-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-}
-#a5 {
-    -webkit-transform: rotate(120.00deg);
-    -webkit-animation-delay: 2s;
-}
-#a6 {
-    -webkit-transform: rotate(150.00deg);
-    -webkit-animation-delay: 2.5s;
-}
-.grad_top_1 {
-    stop-color: rgba(255, 215, 0, 1.00);
-    stop-opacity: 0.2;
-}
-.grad_top_2 {
-    stop-color: #F0E68C;
-    stop-opacity: 0.2;
-}
-.grad_b1 {
-    stop-color: #B3C0D2;
-}
-.grad_b2 {
-    stop-color: white;
-    stop-opacity: 0;
-}
-.grad_b3 {
-    stop-color: #B3C0D2;
-}
-.grad_s1 {
-    stop-color: rgba(0, 0, 0, 1.00);
-    stop-opacity: 0;
-}
-.grad_s2 {
-    stop-color: #FFD700;
-    stop-opacity: 0.15;
-}
-.grad_s3 {
-    stop-color: rgba(255, 255, 255, 0.20);
-    stop-opacity: 0;
-}
-.anim {
-    -webkit-animation-name: anim;
-    -moz-animation-name: anim;
-    -o-animation-name: anim;
-    -ms-animation-name: anim;
-    animation-name: anim;
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    -o-animation-duration: 2s;
-    -ms-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-    -ms-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    -ms-animation-timing-function: linear;
-    animation-timing-function: linear;
-}
-@-webkit-keyframes anim {
-    0% {
-        opacity: 1;
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>晶彩家园</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- <link rel="stylesheet" href="css/weather7.css"> -->
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+
+    <!-- Phonegap build - cordova support -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- Phonegap build - cordova support -->
+    <script type="text/javascript" src="music/jquery.js"></script>
+    <style type="text/css">
+    div[class*="col-"] {
+        padding: 3px;
     }
-    50% {
-        opacity: 0;
+    div[class*="col-"] img {
+        height: auto;
+        width: 100%;
     }
-    100% {
-        opacity: 1;
-    }
-}
-@-moz-keyframes anim {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@-o-keyframes anim {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@-ms-keyframes anim {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes anim {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-#outline {
-    -webkit-animation-name: outline;
-    -moz-animation-name: outline;
-    -o-animation-name: outline;
-    -ms-animation-name: outline;
-    animation-name: outline;
-    -webkit-animation-duration: 14s;
-    -moz-animation-duration: 14s;
-    -o-animation-duration: 14s;
-    -ms-animation-duration: 14s;
-    animation-duration: 14s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition-timing-function: linear;
-    -moz-transition-timing-function: linear;
-    -o-transition-timing-function: linear;
-    -ms-transition-timing-function: linear;
-    transition-timing-function: linear;
-}
-@-webkit-keyframes outline {
-    0% {
-        -webkit-transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(-359deg) scale3d(1.5, 1.5, 1.5);
-    }
-    100% {
-        -webkit-transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(0deg) scale3d(1.5, 1.5, 1.5);
-    }
-}
-@-moz-keyframes outline {
-    0% {
-        -moz-transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(-359deg) scale3d(1.5, 1.5, 1.5);
-    }
-    100% {
-        -moz-transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(0deg) scale3d(1.5, 1.5, 1.5);
-    }
-}
-@-o-keyframes outline {
-    0% {
-        -o-transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(-359deg) scale3d(1.5, 1.5, 1.5);
-    }
-    100% {
-        -o-transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(0deg) scale3d(1.5, 1.5, 1.5);
-    }
-}
-@-ms-keyframes outline {
-    0% {
-        -ms-transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(-359deg) scale3d(1.5, 1.5, 1.5);
-    }
-    100% {
-        -ms-transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(0deg) scale3d(1.5, 1.5, 1.5);
-    }
-}
-@keyframes outline {
-    0% {
-        transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(-359deg) scale3d(1.5, 1.5, 1.5);
-    }
-    100% {
-        transform: perspective(0px) translate3d(0px, 91px, 0px) rotate(0deg) rotateX(70deg) rotateZ(0deg) scale3d(1.5, 1.5, 1.5);
-    }
-}
-@-webkit-keyframes shine {
-    0% {
-        -webkit-transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(10deg, 1deg);
-    }
-    50% {
-        -webkit-transform: perspective(1000px) translate3d(84px, 0px, -39px) rotate(0deg) skew(89deg, 0deg);
-    }
-    100% {
-        -webkit-transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(11deg, 1deg);
-    }
-}
-@-moz-keyframes shine {
-    0% {
-        -moz-transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(10deg, 1deg);
-    }
-    50% {
-        -moz-transform: perspective(1000px) translate3d(84px, 0px, -39px) rotate(0deg) skew(89deg, 0deg);
-    }
-    100% {
-        -moz-transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(11deg, 1deg);
-    }
-}
-@-o-keyframes shine {
-    0% {
-        -o-transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(10deg, 1deg);
-    }
-    50% {
-        -o-transform: perspective(1000px) translate3d(84px, 0px, -39px) rotate(0deg) skew(89deg, 0deg);
-    }
-    100% {
-        -o-transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(11deg, 1deg);
-    }
-}
-@-ms-keyframes shine {
-    0% {
-        -ms-transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(10deg, 1deg);
-    }
-    50% {
-        -ms-transform: perspective(1000px) translate3d(84px, 0px, -39px) rotate(0deg) skew(89deg, 0deg);
-    }
-    100% {
-        -ms-transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(11deg, 1deg);
-    }
-}
-@keyframes shine {
-    0% {
-        transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(10deg, 1deg);
-    }
-    50% {
-        transform: perspective(1000px) translate3d(84px, 0px, -39px) rotate(0deg) skew(89deg, 0deg);
-    }
-    100% {
-        transform: translate3d(84px, 0px, -39px) rotate(0deg) skew(11deg, 1deg);
-    }
-}
-</style>
+    </style>
+</head>
+
+<body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <div class="row no-gutter">
+            <div  class="col-100"> <a style="display:block;width:100%;height:40px;" class="close-panel" href="web3.html"><i class="iconfont">&#xf0026;</i>  &nbsp; 晶彩家园   </a>
+            </div>
+            <div col="col-100"> <a class="close-panel" href="web1.html" style="display:block;width:100%"><i class="iconfont">&#xf01c7;</i> &nbsp;QQ群:364334120&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+        <!-- Tabs, now tabs wrapper is "views" -->
+        <div class="views tabs toolbar-fixed">
+            <!-- Tab 1 - View 1, active by default -->
+            <div id="tab1" class="view tab active">
+
+                <!-- Your main view, should have "view-main" class-->
+                <div class="view view-main">
+                    <!-- Top Navbar-->
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <!-- We have home navbar without left link-->
+                            <div class="center sliding">晶彩家园</div>
+                            <div class="right">
+                                <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"><i class="icon icon-bars-blue"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+                    <div class="pages navbar-through toolbar-through">
+                        <!-- Page, data-page contains page name-->
+                        <div data-page="index" class="page">
+                            <!-- Scrollable page content-->
+                            <div class="page-content">
+                                <div class="content-block-title " style="text-align: center;font-size: 38px">动态五图</div>
+                                <div class="content-block">
+                                    <div class="row no-gutter">
+                                        <div class="col-50">
+                                            <a href="web5.html">
+                                                <img src="pic/wudong.png">
+                                            </a>
+                                        </div>
+                                        <div class="col-50">
+                                            <a href="web.html">
+                                                <img src="pic/dong2.png">
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-block-title " style="text-align: center;font-size: 38px;">五方如来</div>
 
 
-<div id="wrapper">
-    <div id="outline" class="centering">
-        <div id="diamond" class="base">
-            <svg id="defs">
-                <defs>
-                    <polygon points="32.5,79 48.5,49 79,32 114,32 143,50 159.5,79 159.5,113.5 142,143 112.5,159.5 79,159.5 50,143 32.5,112.5 " id="t" fill="url(#grad_top)"></polygon>
-                    <polygon points="0,54 0,3 45,12" id="m2" fill="url(#grad_a)"></polygon>
-                    <polygon points="45,12 46,46 0,54" id="m1" fill="url(#grad_a2)"></polygon>
-                    <polygon points="144,54 0.5,29 144,3" id="b" fill="url(#grad_b)"></polygon>
-                    <polygon points="144,54 0.5,29 144,3" id="s" fill="url(#grad_s)"></polygon>
-                    <lineargradient id="grad_top" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="192" y2="192">
-                        <stop offset="0" class="grad_top_1"></stop>
-                        <stop offset="1" class="grad_top_2"></stop>
-                    </lineargradient>
-                    <lineargradient id="grad_a" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="100">
-                        <stop offset="0.1" style="stop-color:#FFFFFF; stop-opacity:0.5"></stop>
-                        <stop offset="1" style="stop-color:#27344C"></stop>
-                        <stop offset="0" style="stop-color:#B3C0D2"></stop>
-                    </lineargradient>
-                    <lineargradient id="grad_a2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="100">
-                        <stop offset="0" style="stop-color:#B3C0D2"></stop>
-                        <stop offset="0.5" style="stop-color:#FFFFFF;stop-opacity:0.1"></stop>
-                        <stop offset="1" style="stop-color:#27344C"></stop>
-                    </lineargradient>
-                    <lineargradient id="grad_b" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="50" y2="90">
-                        <stop offset="0" class="grad_b1"></stop>
-                        <stop offset="0.5" class="grad_b2"></stop>
-                        <stop offset="1" class="grad_b3"></stop>
-                    </lineargradient>
-                    <lineargradient id="grad_s" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" class="grad_s1"></stop>
-                        <stop offset="0.5" class="grad_s2"></stop>
-                        <stop offset="1" class="grad_s3"></stop>
-                    </lineargradient>
-                </defs>
-            </svg>
+                                <div class="list-block">
+                                    <div class="row no-gutter">
+                                        <div class="col-50">
 
-            <svg id="top" width="192px" height="192px">
-                <image xlink:href="pic/wugold.png" height="110" width="110" x="45" y="45" />
-                <use xlink:href="#t"></use>
-            </svg>
+                                            <div class="col-100">
+                                                <img src="pic/wu3.png">
+                                            </div>
+                                            <div class="col-100">
+                                                <img src="pic/wu4.png">
+                                            </div>
+                                        </div>
+                                        <div class="col-50">
+                                            <div class="col-100">
+                                                <img src="pic/wu2.png">
+                                            </div>
+                                            <div class="col-100">
+                                                <img src="pic/wu5.png">
+                                            </div>
+                                        </div>
+                                        <div class="col-100">
+                                            <img src="pic/wu1.png">
+                                        </div>
+                                    </div>
+                                </div>
 
-            <div class="faces">
-                <div id="a1">
-                    <div class="face1">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
+
+                                <div class="content-block-title " style="text-align: center;font-size: 38px">双灵</div>
+                                <div class="list-block">
+                                    <div class="row no-gutter">
+                                        <div class="col-50">
+                                            <div class="col-100">
+                                                <img src="pic/c0.png">
+                                            </div>
+                                            <div class="col-100">
+                                                <img src="pic/c1.png">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-50">
+                                            <div class="col-100">
+                                                <img src="pic/c2.png">
+                                            </div>
+                                            <div class="col-100">
+                                                <img src="pic/c3.png">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-100">
+                                            <img src="pic/c4.png">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="content-block-title " style="text-align: center;font-size: 38px">天音</div>
+
+                                <div class="list-block">
+                                    <div class="row no-gutter">
+                                        <div class="col-50">
+                                            <img src="pic/yi.gif">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/xiang.gif">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/yun.gif">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/wu.gif">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/sheng.jpeg">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/sheng1.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="content-block-title gaga" style="text-align: center;font-size: 38px">888晶彩网格</div>
+                                <div class="list-block">
+                                    <div class="row no-gutter">
+                                        <div class="col-50">
+                                            <img src="pic/tu1.jpeg">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/jing1.jpeg">
+                                        </div>
+                                        <div class="col-100">
+                                            <img src="pic/jing2.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content-block-title gaga" style="text-align: center;font-size: 38px">双光生命</div>
+
+                                <div class="list-block">
+                                    <div class="row no-gutter">
+                                        <div class="col-50">
+                                            <img src="pic/shuang.jpeg">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/shuang1.jpeg">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/shuang3.jpeg">
+                                        </div>
+                                        <div class="col-50">
+                                            <img src="pic/shuang2.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="content-block-title gaga" style="text-align: center;font-size: 38px">无极大孢子</div>
+
+                                <div class="list-block">
+                                    <div class="row">
+                                        <div class="col-100">
+                                            <img src="pic/baozi.png">
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="face2">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
+
+                </div>
+
+
+
+            </div>
+            <div id="tab2" class="view tab">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">晶彩影音</div>
                     </div>
                 </div>
-                <div id="a2" class="anim">
-                    <div class="face1">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
-                    </div>
-                    <div class="face2">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
+                <div class="pages navbar-fixed">
+                    <div data-page="home-2" class="page">
+                        <div class="page-content">
+
+                            <iframe width="100%" height="100%" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:95%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"></iframe>
+
+                        </div>
                     </div>
                 </div>
-                <div id="a3" class="anim">
-                    <div class="face1">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
-                    </div>
-                    <div class="face2">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
+            </div>
+            <!-- Tab 2 - View 3 -->
+
+            <div id="tab3" class="view tab">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">记忆晶人</div>
                     </div>
                 </div>
-                <div id="a4" class="anim">
-                    <div class="face1">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
-                    </div>
-                    <div class="face2">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
+
+                <div class="pages navbar-fixed">
+                    <div data-page="home-2" class="page">
+                        <div class="page-content">
+                            <div class="content-block">
+                                <p>晶彩图腾是来自宇宙深处的数据形态</p>
+                                <p>我们一直在探索其深刻含义</p>
+                                <p>这款游戏可以强化图腾在大脑中的印记</p>
+                                <p>连接来自大中央太阳中心的宇宙射线13-00-88通道</p>
+                                <p>&nbsp;</p>
+                                <div class="row">
+                                    <div class="col-100">
+                                        <a href="#" onclick="window.location.href='game.html'" class="button active ">开始</a>
+                                        <!-- <a href="game.html" class="item-link" class="button active ">开始</a> -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="a5" class="anim">
-                    <div class="face1">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
-                    </div>
-                    <div class="face2">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
+            </div>
+
+            <div id="tab4" class="view tab">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">晶人奕恕</div>
                     </div>
                 </div>
-                <div id="a6" class="anim">
-                    <div class="face1">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
+
+                <div class="pages navbar-fixed">
+                    <div data-page="home-2" class="page">
+                        <div class="page-content">
+
+                            <iframe style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:105%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px;" width="100%" height="100%" frameborder="0"></iframe>
+
+                        </div>
                     </div>
-                    <div class="face2">
-                        <svg class="m" width="45px" height="57px">
-                            <use xlink:href="#m1"></use>
-                            <use xlink:href="#m2"></use>
-                        </svg>
-                        <svg class="b" width="144px" height="54px">
-                            <use xlink:href="#b"></use>
-                        </svg>
-                        <svg class="s" width="144px" height="54px">
-                            <use xlink:href="#s"></use>
-                        </svg>
-                    </div>
+                </div>
+            </div>
+
+
+            <!-- Tab bar with tab links -->
+            <div class="toolbar tabbar">
+                <div class="toolbar-inner">
+                    <a href="#tab1" class="tab-link active"><i class="iconfont">&#xf017a;</i></a>
+                    <a href="#tab2" class="tab-link"><i class="iconfont">&#xf0036;</i></a>
+                    <a href="#tab3" class="tab-link"><i class="iconfont">&#xf00e8;</i></a> 
+                    <a href="#tab4" class="tab-link"><i class="iconfont">&#xf01f5;</i></a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
 
-<script type="text/javascript">
-setTimeout(function(){
-window.location.href="index2.html"    
-}, 6000);
-</script>
+</html>
