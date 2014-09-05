@@ -30,12 +30,12 @@ $$('.col-100 img').on('click', function (e) {
 });
 
 $$('#tab4').on('show', function () {
-        if ($$('#tab4 iframe').attr('src')!='http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310') {$$('#tab4 iframe').attr('src','http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310')}
+        if ($$('#tab4 object').attr('data')!='http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310') {$$('#tab4 object').attr('data','http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310')}
 });
 
 $$('#tab2').on('show', function () {
     
-        if ($$('#tab2 iframe').attr('src')!='http://y.baidu.com/jingcai') {$$('#tab2 iframe').attr('src','http://y.baidu.com/jingcai')}
+        if ($$('#tab2 object').attr('data')!='http://y.baidu.com/jingcai') {$$('#tab2 object').attr('data','http://y.baidu.com/jingcai')}
                 
 });
 // Generate dynamic page
@@ -94,13 +94,17 @@ var photoBrowserPhotos = [
     'pic/shuang3.jpeg',
     'pic/jing1.jpeg',
     'pic/jing2.jpeg',
-    'pic/xiang.gif',
-    'pic/yi.gif',
-    'pic/yun.gif',
-    'pic/wu.gif',
+    'pic/xiang.png',
+    'pic/yi.png',
+    'pic/yun.png',
+    'pic/wu.png',
+    'pic/nv.png',
+    'pic/xiang.png',
+    'pic/shou.png',
+    'pic/hundun.gif',
+    'pic/li.png',
     'pic/baozi.png',
 ];
 var photoBrowserDark = myApp.photoBrowser({
-    photos: photoBrowserPhotos,
-    theme: 'dark'
+    photos: photoBrowserPhotos    
 });

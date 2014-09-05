@@ -26,7 +26,13 @@
         height: auto;
         width: 100%;
     }
+    
     </style>
+    <script language="javascript" type="text/javascript">
+    function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    }
+    </script>
 </head>
 
 <body>
@@ -38,12 +44,12 @@
     <div class="panel panel-left panel-reveal">
         <div class="content-block">
             <div class="row no-gutter">
-            <div  class="col-100"> <a style="display:block;width:100%;height:40px;" class="close-panel" href="web3.html"><i class="iconfont">&#xf0026;</i>  &nbsp; 晶彩家园   </a>
+                <div class="col-100"> <a style="display:block;width:100%;height:40px;" class="close-panel" href="web3.html"><i class="iconfont">&#xf0026;</i>  &nbsp; 晶彩家园   </a>
+                </div>
+                <div col="col-100"> <a class="close-panel" href="web1.html" style="display:block;width:100%"><i class="iconfont">&#xf01c7;</i> &nbsp;QQ群:364334120&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
+                </div>
             </div>
-            <div col="col-100"> <a class="close-panel" href="web1.html" style="display:block;width:100%"><i class="iconfont">&#xf01c7;</i> &nbsp;QQ群:364334120&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
-            </div>
-        </div>
-            
+
         </div>
     </div>
     <!-- Views-->
@@ -251,9 +257,10 @@
                 <div class="pages navbar-fixed">
                     <div data-page="home-2" class="page">
                         <div class="page-content">
-
-                            <iframe width="100%" height="100%" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:95%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"></iframe>
-
+                            <div style="width: 100%; height: 100%; overflow: scroll !important;-webkit-overflow-scrolling:touch !important;">
+                                <object type="text/html" style="width:100%; height:100%;">
+                                </object>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -281,8 +288,6 @@
                                         <a href="#" onclick="window.location.href='game.html'" class="button active ">开始</a>
                                         <!-- <a href="game.html" class="item-link" class="button active ">开始</a> -->
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -300,8 +305,11 @@
                 <div class="pages navbar-fixed">
                     <div data-page="home-2" class="page">
                         <div class="page-content">
+                            <div style="width: 100%; height: 100%; overflow: scroll !important;-webkit-overflow-scrolling:touch !important;">
+                                <object type="text/html" style="width:100%; height:100%;">
+                                </object>
+                            </div>
 
-                            <iframe style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:105%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px;" width="100%" height="100%" frameborder="0"></iframe>
 
                         </div>
                     </div>
