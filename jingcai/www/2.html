@@ -1,17 +1,24 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
 <style type="text/css">
-#a{
-	background-color: red;
-	width: 300px;
-	height: 100px;
-	overflow: auto;
-}
-#b{
-	background-color: green;
-	width: 300px;
-	height: 1000px
+#a {
+overflow: auto;
+height: 300px
+} 
+#outer {
+overflow: hidden;
+overflow-y: hidden;
+height: 2000px
+} 
+
+iframe{
+overflow: hidden;
+	
 }
 </style>
 
 <div id="a">
-	<div id="b"></div>
+    <div id="outer">
+        <iframe src="http://888000.org" style="height:100%;width:100%;"  frameborder="0" id="b">
+        </iframe>
+    </div>
 </div>

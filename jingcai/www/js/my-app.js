@@ -4,45 +4,63 @@ var myApp = new Framework7();
 // Export selectors engine
 var $$ = Framework7.$;
 
+var av = myApp.device.osVersion;
+
+if (av.split("4.0.").length == 2 || av.split("4.1.").length == 2 || av.split("4.2.").length == 2|| av.split("4.3.").length == 2 ) {
+       $$('.android iframe').each(function(){
+         this.scrolling="no";
+       })
+}else{
+
+}
 // Add view
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
 });
 
- $$('.col-50 img').on('click', function (e) {
-    if (this.src.split('wudong').length==2||this.src.split('dong2').length==2) {
-        
+$$('.col-50 img').on('click', function(e) {
+    if (this.src.split('wudong').length == 2 || this.src.split('dong2').length == 2) {
+
         return;
     };
- var j=0;    
+    var j = 0;
     for (var i = photoBrowserPhotos.length - 1; i >= 0; i--) {
-        if(this.src.split(photoBrowserPhotos[i]).length==2){j=i;}
+        if (this.src.split(photoBrowserPhotos[i]).length == 2) {
+            j = i;
+        }
     };
     photoBrowserDark.open(j);
 });
-$$('.col-100 img').on('click', function (e) {
- var j=0;    
+$$('.col-100 img').on('click', function(e) {
+    var j = 0;
     for (var i = photoBrowserPhotos.length - 1; i >= 0; i--) {
-        if(this.src.split(photoBrowserPhotos[i]).length==2){j=i;}
+        if (this.src.split(photoBrowserPhotos[i]).length == 2) {
+            j = i;
+        }
     };
     photoBrowserDark.open(j);
 });
 
-$$('#tab4').on('show', function () {   
-      if ($$('#tab4 iframe').attr('src')!='http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310') {$$('#tab4 iframe').attr('src','http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310')}
+$$('#tab4').on('show', function() {    
+    if ($$('#tab4 iframe').attr('src')==null) {
+        $$('#tab4 iframe').attr('src', 'http://shop.m.taobao.com/shop/shop_index.htm?shop_id=37045310')
+    }    
 });
 
-$$('#tab2').on('show', function () {    
-       if ($$('#tab2 iframe').attr('src')!='http://y.baidu.com/jingcai') {$$('#tab2 iframe').attr('src','http://y.baidu.com/jingcai')}
-                
+$$('#tab2').on('show', function() {    
+    if ($$('#tab2 iframe').attr('src')==null) {
+        $$('#tab2 iframe').attr('src', 'http://y.baidu.com/jingcai')
+    }
+    
 });
 
- 
+
 // Generate dynamic page
 var dynamicPageIndex = 0;
+
 function createContentPage() {
-	mainView.loadContent(
+    mainView.loadContent(
         '<!-- Top Navbar-->' +
         '<div class="navbar">' +
         '  <div class="navbar-inner">' +
@@ -65,7 +83,7 @@ function createContentPage() {
         '  </div>' +
         '</div>'
     );
-	return;
+    return;
 }
 
 
@@ -73,7 +91,7 @@ function createContentPage() {
 
 // Demo Photo Browsers
 var photoBrowserPhotos = [
-    
+
     'pic/tu1.jpeg',
     'pic/tu2.jpeg',
     'pic/tu3.jpeg',
@@ -86,7 +104,7 @@ var photoBrowserPhotos = [
     'pic/c1.png',
     'pic/c2.png',
     'pic/c3.png',
-    'pic/c4.png',    
+    'pic/c4.png',
     'pic/sheng.jpeg',
     'pic/sheng1.jpeg',
     'pic/shuang.jpeg',
@@ -107,10 +125,10 @@ var photoBrowserPhotos = [
     'pic/nv.png',
     'pic/xiang.png',
     'pic/shou.png',
-    'pic/hundun.gif',
+    'pic/hundun.png',
     'pic/li.png',
     'pic/baozi.png',
 ];
 var photoBrowserDark = myApp.photoBrowser({
-    photos: photoBrowserPhotos    
+    photos: photoBrowserPhotos
 });
